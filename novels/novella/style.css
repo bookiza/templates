@@ -1,5 +1,4 @@
-@import url('//fonts.googleapis.com/css?family=Fascinate');
-@import url('//fonts.googleapis.com/css?family=Source+Serif+Pro');
+@import url('//fonts.googleapis.com/css?family=Source+Serif+Pro|Josefin+Sans');
 
 body {
   background: #fff;
@@ -14,7 +13,7 @@ h1 {
   padding: 0;
   color: #666;
   font-size: 6vw;
-  font-family: 'Fascinate', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   width: 100%;
   text-align: center;
 }
