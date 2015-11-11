@@ -9,30 +9,6 @@ body {
   font: 3.6vw/1.2 'Source Serif Pro', serif;
 }
 
-.leaf {
-  height: 100%;
-  height: 100vh;
-  width: 80%;
-  margin: auto;
-}
-
-.inner {
-  margin: 12% auto;
-  width: 100%;
-}
-
-.flex {
-  display: -webkit-box;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-}
-
-.justify {
-  text-align: justify;
-}
-
-
 h1 {
   margin: 1vw 0;
   padding: 0;
@@ -70,20 +46,29 @@ a:active {
   text-shadow: 0 0 2px #fff;
 }
 
-.right {
-  float: right;
+/* Page specific */
+
+.leaf {
+  height: 100%;
+  height: 100vh;
+  width: 80%;
+  margin: auto;
 }
 
-.left {
-  float: left;
+.inner {
+  margin: 12% auto;
+  width: 100%;
 }
 
-ol {
-  list-style-type: lower-roman;
-  list-style-position: inside;
-  list-style-image: none;
-  margin: 0;
-  padding: 1vw 5vw;
+.flex {
+  display: -webkit-box;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.justify {
+  text-align: justify;
 }
 
 /* Your custom classes below */
