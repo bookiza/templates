@@ -9,5 +9,5 @@ Feel free to submit pull requests for new templates for Superbooks along with a 
 ### Rules
 * [x] Template must be responsive. 
 * [x] Template must use responsive typography.
-* [x] Use a single break-point CSS media queriy at 870 pixels *only* if it is absolutely necessary. Our templates generally don't use media queries. 
+* [x] Use only `portrait` ↹ `landscape` CSS media query switch and never hardcode values in pixels *ever*. Superbook templates generally do not require media queries. 
 * [x] Submit new templates with a link to actual book where it has been used.
