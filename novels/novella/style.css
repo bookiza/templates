@@ -1,12 +1,12 @@
 /* Instructions:
 
-1.  Include the following line in the HEAD of your book (spine_url):
+1.  Include the following line in the HEAD template of your book's layout:;
 
     <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow|EB+Garamond:400,400i|Josefin+Sans' rel='stylesheet' type='text/css'>
 
-2. This template is useful for text books (any length) containing p, blockquote, pre, img, anchor and header tags only. 
+2. This template is suitable only for text books (any length) containing p, blockquote, pre, img, anchor and header tags. 
 
-3. Doesn't style the first five pages.
+3. Will not style the first five pages of your book. 
 
 */
 
