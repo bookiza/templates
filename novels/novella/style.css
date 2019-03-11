@@ -1,26 +1,54 @@
-@import url('//fonts.googleapis.com/css?family=Source+Serif+Pro|Josefin+Sans');
+/* Instructions:
 
-body {
+1.  Include the following line in the HEAD of your book (spine_url):
+
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow|EB+Garamond:400,400i|Josefin+Sans' rel='stylesheet' type='text/css'>
+
+2. This template is useful for text books (any length) containing p, blockquote, pre, img, anchor and header tags only. 
+
+3. Doesn't style the first five pages.
+
+*/
+
+
+html, body {
   background: #fff;
   margin: 0 0;
   overflow: hidden;
-  color: #444;
-  font: 3.6vw/1.2 'Source Serif Pro', serif;
+  color: #010203;
+  height:100vh;
+  width:100vw;
+  font-family: 'EB Garamond', serif;
+  font-style: normal;
+  font-synthesis: none;
+  font-stretch: ultra-condensed;
+  font-variant: no-common-ligatures proportional-nums slashed-zero;
+  font-size: 4vw;
+  line-height: calc(4vw * 1.50);
+  font-kerning: normal;
+  text-rendering: geometricPrecision;
 }
 
-h1 {
+
+h1, h2, h3, h4 {
   margin: 1vw 0;
   padding: 0;
-  color: #666;
-  font-size: 6vw;
-  font-family: 'Josefin Sans', sans-serif;
   width: 100%;
   text-align: center;
+  font-weight: 100;
 }
 
-p {
-  margin: 3vw 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'PT Sans Narrow', serif;    
+    margin: 2vw 0;
+    padding: 0;
 }
+
 
 img {
   border: 0;
@@ -31,14 +59,13 @@ a {
   color: #0077ff;
   outline: 0 none;
   text-decoration: none;
-  text-rendering: optimizelegibility;
 }
 
 a:focus,
 a:active,
 a:hover {
   outline: 0 none;
-  text-shadow: 0 0 2px #0cf;
+  color: #070;
 }
 
 a:active {
@@ -50,13 +77,17 @@ a:active {
 .leaf {
   height: 100%;
   height: 100vh;
-  width: 80%;
+  width: 100%;
+  width: 100vw;
   margin: auto;
 }
 
 .inner {
-  margin: 12% auto;
-  width: 100%;
+  margin: calc((100vh - (17 * (4vw * 1.5) + 4vw))/2) auto; 
+  width: 85vw;
+  max-height: calc(17 * (4vw * 1.5) + 4vw);
+  break-after: right; 
+   /*background: aliceblue; */
 }
 
 .flex {
@@ -70,4 +101,107 @@ a:active {
   text-align: justify;
 }
 
-/* Your custom styles below */
+p {
+    text-indent: 5vw;  
+    margin: 0 0 0 0;
+}
+
+.no-indent {
+  text-indent: 0;
+}
+
+.stretch-last-line {
+  text-align-last: justify;
+}
+
+.squeeze-para {
+  letter-spacing: -0.5px;
+}
+
+hr.section {
+  border: 0;
+  text-align: center;
+  height: calc(4vw * 1.50);          /* Take a break of two lines only. */
+  margin: calc((4vw * 1.50)/2) 0; 
+}
+
+hr.section::after {
+  content: "";
+}
+
+hr.section::before {
+  content: "❖"; 
+  color: black;
+}
+
+
+hr {
+  border: 0;
+  text-align: center;
+  height: calc(4vw * 1.50);          /* Take a break of two lines only. */
+  margin: calc((4vw * 1.50)/2) 0; 
+}
+
+hr::after {
+  content: " ";
+}
+
+hr::before {
+  content: "== ❖ ==";
+  color: black;
+}
+
+
+.pad-vertically{
+  padding: calc(4vw * 1) 0;
+}
+
+
+.center {
+  text-align: center;
+  margin:0 auto;
+}
+
+.small {
+  font-size: 80%;
+}
+
+.uppercase {
+  text-transform: uppercase;  
+}
+
+blockquote {
+  text-align:center;
+  font-size: 90%;
+  font-style: italic;
+  position:relative;
+  quotes: "\201C""\201D""\2018""\2019";
+  width: 90%;
+  margin: calc( 4 * (150vh *(1115/1443))/100 * 7/5) auto;
+}
+
+blockquote p {
+  margin: calc( 4 * (150vh *(1115/1443))/100 * 7/5) auto !important;
+}
+
+pre, code {
+  white-space: pre-wrap;     
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;  
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+  margin: 0 auto calc( 4 * (150vh *(1115/1443))/100 * 7/5); 
+  font-size: 90%;  
+}
+
+h3 {
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.2em;
+  font-size: 200%;  
+}
+
+.josefin-sans {
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.2em;
+}
+
