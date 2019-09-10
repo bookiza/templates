@@ -1,3 +1,15 @@
+/* Instructions:
+
+1.  Include the following line in the HEAD template of your book's layout:;
+
+    <link href="https://fonts.googleapis.com/css?family=EB+Garamond:400,400i|Berkshire+Swash" rel="stylesheet" type="text/css">
+
+2. This template is suitable only for textbooks (of any length) containing p, blockquote, pre, image, anchor and header tags. 
+
+3. The template assumes that the first five pages of your book will be styled separately. 
+
+*/
+
 html,
 body {
   background: #fff;
@@ -21,14 +33,15 @@ h1,
 h2,
 h3,
 h4 {
-  margin: 2vw 0;
-  padding: 0;
-  padding: 0;
-  color: #444;
   width: 100%;
   text-align: center;
-  font-weight: 100;
-  line-height: 1.25;
+  line-height: calc(2 * 4vw * 1.50);
+}
+
+h5,
+h6 {
+  line-height: calc(1 * 4vw * 1.50);
+
 }
 
 h1,
@@ -38,12 +51,19 @@ h4,
 h5,
 h6 {
   font-family: 'Berkshire Swash', cursive;
+  margin: 0 0;
+  padding: 0;
+  color: #000;
+  font-weight: 100;
 }
+
 
 img {
   border: 0;
   -ms-interpolation-mode: bicubic;
   display:block;
+  margin: calc(1/2 * 4vw * 1.50) auto;
+
 }
 
 a {
@@ -71,7 +91,7 @@ p {
 p.start-chapter {
   text-indent: 0;
   margin:  0 0 0;
-  margin: calc( 3 * 4 * (150vh *(1115/1443))/100 * 7/5) auto 0; 
+  margin: calc( 3 * 4 * (150vh *(1115/1443))/100 * 7/5) auto 0;
 }
 
 p.start-chapter:first-letter {
@@ -92,11 +112,12 @@ blockquote {
   position: relative;
   quotes: "\201C""\201D""\2018""\2019";
   width: 90%;
-  margin: calc( 4 * (150vh *(1115/1443))/100 * 7/5) auto;
+  margin: calc( 1/2 * (150vh *(1115/1443))/100 * 7/5) auto;
+  /* background: #ffc; /*   /* Enable this color if require */
 }
 
-blockquote p {
-  margin: calc( 4 * (150vh *(1115/1443))/100 * 7/5) auto !important;
+blockquote p, blockquote em {
+  margin: calc( 1/2 * (150vh *(1115/1443))/100 * 7/5) auto !important;
 }
 
 pre,
@@ -117,14 +138,7 @@ code {
   font-size: 4vw;
   line-height: calc(4vw * 1.50);
   font-kerning: normal;
-  text-rendering: geometricPrecision;  
-}
-
-h3 {
-  font-family: 'Berkshire Swash', cursive;
-  line-height: 1.2em;
-  color: black;
-  font-size: 200%;
+  text-rendering: geometricPrecision;
 }
 
 ol {
@@ -181,7 +195,7 @@ hr.section::after {
 }
 
 hr.section::before {
-  content: "❧";
+  content: "❦";
   color: black;
 }
 
@@ -198,7 +212,7 @@ hr.chapter::after {
 }
 
 hr.chapter::before {
-  content: "❧";
+  content: "❦";
   color: black;
 }
 
@@ -233,9 +247,11 @@ hr::before {
 .inner {
   margin: calc((100vh - (17 * (4vw * 1.5) + 4vw))/2) auto;
   width: 85vw;
+  height: calc(17 * (4vw * 1.5) + 4vw);
   max-height: calc(17 * (4vw * 1.5) + 4vw);
   break-after: right;
-  /*background: aliceblue; */ /* enable to see the maximum staging area */
+  display:inline-block;
+  /* background: aliceblue; */ /* enable to see the maximum staging area */
 }
 
 .flex {
@@ -282,7 +298,7 @@ p.stretch-para {
 
 .center {
   text-align: center;
-  margin: 0 auto;
+  margin: inherit auto;
 }
 
 .small {
